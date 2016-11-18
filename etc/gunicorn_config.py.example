@@ -1,0 +1,11 @@
+command = '/opt/envs/vikio/bin/gunicorn'
+raw_env = [
+    'DJANGO_SETTINGS_MODULE=vikio.settings.prod',
+    'SECRET_KEY="sekreto"',
+    'EMAIL_HOST_PASSWORD="pasvorto"',
+]
+pythonpath = '/srv/vikio/pasportaservo-vikio'
+bind = ['127.0.0.1:8030', '[::1]:8030']
+workers = 3
+user = 'ps'
+errorlog = 'stderr.log'
